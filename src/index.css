@@ -1,3 +1,79 @@
 @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
+
+body {
+  background-color: #f4f5fc;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+
+  margin-top: 50px;
+  padding: 20px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  padding: 15px;
+
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.icons-container {
+  width: 80%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card img {
+  width: 80%;
+}
+
+.card div h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #79797a;
+}
+
+.card div div {
+  font-size: 26px;
+  font-weight: 700;
+  color: #f58b0b;
+}
+
+
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.orange600 { color: #f58b0b; }
+
+@media screen and (min-width: 500px) {
+  #app {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #app {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 75px;
+  }
+}
